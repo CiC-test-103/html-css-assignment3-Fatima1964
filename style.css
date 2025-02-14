@@ -55,6 +55,8 @@ h1, h2, h3, h4, h5, h6 {
   --text-color: #765135;
   --font-serif: 'young-serif', serif;
   --font-sans: 'outfit', sans-serif;
+  --clr-rose800: hsl(332, 51%, 32%);
+
 }
 
 body {
@@ -101,7 +103,7 @@ p {
   padding: 12px;
   border-radius: 8px;
   font-size: 14px;
-  color: rgb(179, 93, 179);
+  color: var(--clr-rose800);
   margin: 15px 0;
 }
 
