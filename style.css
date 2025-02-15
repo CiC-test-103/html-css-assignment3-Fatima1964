@@ -56,7 +56,13 @@ h1, h2, h3, h4, h5, h6 {
   --font-serif: 'young-serif', serif;
   --font-sans: 'outfit', sans-serif;
   --clr-rose800: hsl(332, 51%, 32%);
-
+  /* Typography */
+  --font-paragraph: 16px;
+  --font-header: 32px;
+  --font-sub-header: 24px;
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-black: 700;
 }
 
 body {
@@ -69,6 +75,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-size: var(--font-paragraph);
+  font-weight: var(--fw-regular);
 }
 
 .recipe-container {
@@ -88,12 +96,13 @@ body {
 h1 {
   font-family: var(--font-serif);
   color: var(--primary-color);
-  font-size: 32px;
+  font-size: var(--font-header);
+  font-weight: var(--fw-black);
   margin-top: 15px;
 }
 
 p {
-  font-size: 14px;
+  font-size: var(--font-paragraph);
   line-height: 1.6;
   color: var(--primary-color);
 }
@@ -102,14 +111,14 @@ p {
   background: var(--highlight-bg);
   padding: 12px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: var(--font-paragraph);
   color: var(--clr-rose800);
   margin: 15px 0;
 }
 
 .section-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: var(--font-sub-header);
+  font-weight: var(--fw-bold);
   color: var(--text-color);
   font-family: var(--font-serif);
   margin-bottom: 10px;
@@ -119,14 +128,14 @@ p {
 
 /* Ordered List Styling */
 ol {
-  list-style-position: outside; /* Ensures numbers stay outside */
-  padding-left: 10px; /* Adds spacing */
+  list-style-position: outside;
+  padding-left: 10px;
 }
 
 /* Unordered and Ordered List General Styling */
 ul, ol {
   padding-left: 20px;
-  font-size: 14px;
+  font-size: var(--font-paragraph);
   color: var(--primary-color);
   text-indent: 5px;
 }
@@ -139,9 +148,9 @@ ol li {
 
 /* Custom Styling for Ordered List Markers */
 ol li::marker {
-  color: var(--text-color); /* Change to any color you want */
-  font-weight: bold; /* Optional: Make the numbers bold */
-  font-size: 0.8rem; /* Optional: Adjust the size */
+  color: var(--text-color); 
+  font-weight: var(--fw-bold);
+  font-size: 0.8rem;
 }
 
 /* Nutrition Table Styling */
@@ -155,17 +164,17 @@ ol li::marker {
   color: var(--primary-color);
   padding: 8px;
   border-bottom: 1px solid var(--primary-color);
-  font-size: 14px;
+  font-size: var(--font-paragraph);
 }
 
 /* Styling for the second column in the nutrition table */
 .nutrition-table td:nth-child(2) {
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: var(--fw-bold);
 }
 
 .nutrition-table strong {
-  font-weight: 600;
+  font-weight: var(--fw-bold);
 }
 
 /* Footer Positioning */
@@ -177,6 +186,11 @@ ol li::marker {
   padding: 10px;
   background: var(--card-background);
   border-top: 1px solid var(--primary-color);
+  font-size: 11px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /* Media Queries for Responsiveness */
@@ -194,7 +208,7 @@ ol li::marker {
   }
 
   h1, h2 {
-    font-size: 1.5rem;
+    font-size: var(--font-sub-header);
   }
 
   description {
@@ -215,14 +229,4 @@ ol li::marker {
   description {
     font-size: 0.75rem;
   }
-}
-
-/* Attribution CSS */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
